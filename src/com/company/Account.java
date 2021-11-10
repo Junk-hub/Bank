@@ -1,0 +1,12 @@
+package com.company;
+
+public class Account {
+    public double sum;
+    public double percent;
+
+    //конструктор
+    public Account(double sum, double percent){
+        this.percent = percent;
+        this.sum = sum;
+    }
+}

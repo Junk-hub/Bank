@@ -30,5 +30,9 @@ public class Main {
         System.out.println("---------------------------------------");
         Card card1 = new Card(1234567891, 600000);
         System.out.println(card1.balance());
+
+        System.out.println("---------------------------------------");
+        Loan loan1 = new Loan(15000000.0, 2.4, 16, 37000, "Car");
+        System.out.println(loan1.showInfo());
     }
 }

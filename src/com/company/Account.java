@@ -9,4 +9,6 @@ public class Account {
         this.percent = percent;
         this.sum = sum;
     }
+
+    public String showInfo(){return "";}
 }

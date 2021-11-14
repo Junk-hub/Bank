@@ -27,5 +27,8 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+        System.out.println("---------------------------------------");
+        Card card1 = new Card(1234567891, 600000);
+        System.out.println(card1.balance());
     }
 }

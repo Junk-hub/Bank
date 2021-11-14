@@ -21,7 +21,7 @@ public class Person {
         this.email = email;
         this.age = age;
 
-        //17 - Присвоение полю с полом человека значения их перечисления gender
+        //17 - Присвоение полю с полом человека значения из перечисления gender
         switch (sex) {
             case "male":
                 this.gen = gender.male;

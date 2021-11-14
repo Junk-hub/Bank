@@ -12,7 +12,7 @@ public class SavingAccount extends Account{
     //t - кол-во лет начисления процентов
     public void predictSum(int n, int t){
 
-        //TASk-18
+        //TASK-18
         //18 - обработка исключения при делении на ноль
         try {
             if (percent/n == Double.POSITIVE_INFINITY ||

@@ -3,7 +3,6 @@ package com.company;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
-import java.util.SimpleTimeZone;
 
 public class Card {
     private long number;
@@ -12,6 +11,7 @@ public class Card {
     //20 - добавление даты, до которой будет действительна и активна карта
     private Date expiration;
 
+    //конструктор
     public Card(long number, double sum){
         this.number = number;
         this.sum = sum;
@@ -28,6 +28,7 @@ public class Card {
         this.expiration = date;
     }
 
+    //вывод баланса и информации о карте
     public String balance(){
         //20 - создание формата для даты и времени, чтобы выводить их в удобном формате
         //и отмести ненужную информацию

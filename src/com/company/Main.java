@@ -1,19 +1,30 @@
 package com.company;
 
+import java.util.HashMap;
+
 public class Main {
 
-    //Метод main временно служит тестовым методом
     public static void main(String[] args) {
 
-        SavingAccount savingAccount1 = new SavingAccount(0, 3);
-        savingAccount1.predictSum(10, 9);
+        //TASK-21
+        //21 - создаем ассоциативный массив, в котором будем хранить ID номер клиента и указатель на объект - клиента
+        HashMap<Long, Client> clients = new HashMap<>();
 
-        //TASK-19
-        //19 - Пытаемся закрыть счет, если на нем есть средства, выдаем сообщение
-        try {
-            savingAccount1.close();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        Client client1 = new Client("Dmitriy", "89037471972", "1@.ru", 18, "m",1, clients);
+        System.out.println(client1.printInfo());
+        System.out.println("---------------------------------------");
+
+        Client client2 = new Client("Ilia", "89778116787", "2@.ru", 18, "m", 2, clients);
+        System.out.println(client2.printInfo());
+        System.out.println("---------------------------------------");
+
+        System.out.println(clients);
+
+        SavingAccount savingAccount = new SavingAccount(2500, 3.4);
+        savingAccount.topUp(2000, true, "", client2, client1, clients);
+
+        System.out.println(client2.recentTransfers);
+        System.out.println(client1.recentTransfers);
+
     }
 }

@@ -1,4 +1,6 @@
 package com.company;
+import com.company.validators.EmailValidator;
+import com.company.validators.PhoneNumberValidator;
 
 public class Person {
 
@@ -17,8 +19,24 @@ public class Person {
     //конструктор
     public Person(String name, String phoneNumber, String email, int age, String sex){
         this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
+
+        PhoneNumberValidator phoneNumberValidator = new PhoneNumberValidator();
+        if (phoneNumberValidator.validate(phoneNumber))
+            this.phoneNumber = phoneNumber;
+        else {
+            System.out.println("Введенный номер телефона не соответствует требованиям");
+            this.phoneNumber = "not stated";
+        }
+
+        EmailValidator validator = new EmailValidator();
+
+        if (validator.validate(email))
+            this.email = email;
+        else {
+            System.out.println("Введенный email не соответствует требованиям");
+            this.email = "not stated";
+        }
+
         this.age = age;
 
         //17 - Присвоение полю с полом человека значения из перечисления gender
@@ -56,3 +74,4 @@ public class Person {
                 "\nпол: " + this.gen;
     }
 }
+

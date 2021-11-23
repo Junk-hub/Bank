@@ -12,5 +12,10 @@ public class TestCard {
         System.out.println(card1.balance());
         System.out.println("------------------------");
         System.out.println(card2.balance());
+
+        //TASK-23
+        //выполнение проверки работы метода hashCode()
+        System.out.println(card1.hashCode());
+        System.out.println(card2.hashCode());
     }
 }

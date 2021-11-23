@@ -38,4 +38,14 @@ public class Card {
                 "\n" + "Balance: " + this.sum +
                 "\n" + "Validity period: " + simpleDateFormat.format(this.expiration);
     }
+
+    //TASK-23
+    //переопределение метода hash code
+    @Override
+    public int hashCode() {
+        int result = expiration.hashCode();
+        result = (int) (53 * result + number);
+        result = (int) (53 * result + sum);
+        return result;
+    }
 }

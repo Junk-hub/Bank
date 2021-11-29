@@ -21,6 +21,14 @@ public class Client extends Person{
         this.recentTransfers = new HashMap<>();
     }
 
+    public HashMap<Long, Double> getRecentTransfers() {
+        return recentTransfers;
+    }
+
+    public long getID() {
+        return ID;
+    }
+
     //предоставление информации о клиенте
     @Override
     public String printInfo() {

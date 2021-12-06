@@ -6,6 +6,8 @@ import java.util.HashMap;
 public class TestDebitCard {
 
     public static void main(String[] args) {
+        //TASK-27
+        //27 - пример использования HashMap для хранения информации о пользователях и банкоматах
         HashMap<Long, Client> clients = new HashMap<>();
         HashMap<Long, Client> ATMs = new HashMap<>();
 
@@ -14,7 +16,7 @@ public class TestDebitCard {
         Client client2 = new Client("Ilia", "89778116787", "2@.ru", 18, "m", 2, clients);
 
         System.out.println(debitCard1.balance());
-        
+
         debitCard1.topUp(20, ATMMachine, client2);
 
         System.out.println(debitCard1.balance());

@@ -7,6 +7,8 @@ import java.util.HashMap;
 
 public class TestSavingAccount {
     public static void main(String[] args) {
+        //TASK-27
+        //27 - пример использования HashMap для хранения информации о пользователях
         HashMap<Long, Client> clients = new HashMap<>();
 
         SavingAccount savingAccount1 = new SavingAccount(0, 3);

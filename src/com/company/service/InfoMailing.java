@@ -13,6 +13,7 @@ public class InfoMailing implements Service {
     public void startMailing(){
         //TODO
         //описать взаимодействие с рассылкой сообщений
+        System.out.println("Рассылка информационных сообщений успешно подключена");
     }
 
     @Override

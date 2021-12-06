@@ -13,4 +13,15 @@ public class Transfer {
         this.senderID = senderID;
         this.recipientID = recipientID;
     }
+
+    public void showInfo(){
+        String line = "Сумма перевода: " + this.sum +
+                "\nID отправителя: " + this.senderID +
+                "\nID получателя: " + this.recipientID;
+        System.out.println(line);
+    }
+
+    public double getSum() {
+        return sum;
+    }
 }

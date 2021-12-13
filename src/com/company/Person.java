@@ -2,7 +2,11 @@ package com.company;
 import com.company.validators.EmailValidator;
 import com.company.validators.PhoneNumberValidator;
 
-public class Person {
+import java.io.Serializable;
+
+//TASK-29
+//29 - наследование от класса Serializable родителя класса Client для корректной работы сериализации
+public class Person implements Serializable {
 
     //Task-17
     //17 - Создание перечисления гендеров

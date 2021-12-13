@@ -1,8 +1,11 @@
 package com.company;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class Client extends Person{
+//TASK-29
+//29 - создание класса, объекты которого будут иметь возможность сохранения
+public class Client extends Person implements Serializable {
 
     long ID;
     //TASK-21
